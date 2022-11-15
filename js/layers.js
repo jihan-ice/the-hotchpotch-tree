@@ -56,8 +56,7 @@ addLayer("wf", { //这是代码中的节点代码 例如player.p可以调用该�
 			y=y.pow(clickableEffect("wf",23))
 			if(y.gte(1e10))y=y.sub(1e10).pow(0.9).add(1e10)
       player.wf.gd = x.add(y)
-      var mp3 = "/music/"+xnumber(0,2)+".wav"
-      var mp3 = new Audio(mp3)
+      var mp3 = new Audio("music/0.wav")
       mp3.play()
                },
 	  },
