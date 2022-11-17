@@ -22,4 +22,5 @@ function moneylayer(){addLayer("money", { //这是代码中的节点代码 例�
     },
     row: 1, // Row the layer is in on the tree (0 is the first row)  QwQ:1也可以当第一排
     layerShown(){return true},
+    return 0
 })}
