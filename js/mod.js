@@ -3,6 +3,8 @@ let modInfo = {
 	id: "你是一个一个独一无二的杂烩啊",
 	author: "极寒",
 	pointsName: "点数",
+	modFiles: [
+		"js/newlayers/money.js"],
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new ExpantaNum (0), // Used for hard resets and new players
