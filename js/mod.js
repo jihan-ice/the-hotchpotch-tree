@@ -4,7 +4,7 @@ let modInfo = {
 	author: "极寒",
 	pointsName: "点数",
 	modFiles: [
-		"js/newlayers/money.js"],
+		"newlayers/money.js"],
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new ExpantaNum (0), // Used for hard resets and new players
