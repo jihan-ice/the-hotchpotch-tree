@@ -259,7 +259,7 @@ addLayer("money", { //这是代码中的节点代码 例如player.p可以调用�
     symbol: "M", // 这是节点上显示的字母
     position: 1, // 节点顺序
     startData() { return {
-        unlocked: true, //是否开始就解锁
+        unlocked: false, //是否开始就解锁
 		points: new ExpantaNum(0),
     }},
     color: "Gold",
