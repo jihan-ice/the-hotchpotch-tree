@@ -278,5 +278,5 @@ addLayer("money", { //这是代码中的节点代码 例如player.p可以调用�
         return exp
     },
     row: 1, // Row the layer is in on the tree (0 is the first row)  QwQ:1也可以当第一排
-    layerShown(){return if(player.wf.gd.gte(1e20))},
+    layerShown(){return true},
 })
