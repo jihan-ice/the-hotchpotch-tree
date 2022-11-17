@@ -265,7 +265,7 @@ addLayer("money", { //这是代码中的节点代码 例如player.p可以调用�
     color: "Gold",
     resource: "金币", // 重置获得的资源名称
     type: "static", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
-    requires:new ExpantaNum(10),
+    requires:new ExpantaNum(1e20),
     exponent:1,
     baseAmount(){return player.wf.gd},//基础资源数量
     baseResource:"功德",//基础资源名称
