@@ -53,6 +53,7 @@ addLayer("wf", { //这是代码中的节点代码 例如player.p可以调用该�
 			y=y.add(clickableEffect("wf",21))
 			y=y.mul(clickableEffect("wf",22))
 			y=y.mul(clickableEffect("wf",31)).mul(clickableEffect("wf",32)).mul(clickableEffect("wf",33))
+			y=y.mul(upgradeEffect("money",11))
 			y=y.pow(clickableEffect("wf",23))
 			if(y.gte(1e10))y=y.sub(1e10).pow(0.9).add(1e10)
       player.wf.gd = x.add(y)
@@ -259,7 +260,7 @@ addLayer("money", { //这是代码中的节点代码 例如player.p可以调用�
     symbol: "M", // 这是节点上显示的字母
     position: 1, // 节点顺序
     startData() { return {
-        unlocked: false, //是否开始就解锁
+        unlocked: true, //是否开始就解锁
 		points: new ExpantaNum(0),
     }},
     color: "Gold",
@@ -279,4 +280,17 @@ addLayer("money", { //这是代码中的节点代码 例如player.p可以调用�
     },
     row: 2, // Row the layer is in on the tree (0 is the first row)  QwQ:1也可以当第一排
     layerShown(){return true},
+    upgrades: { // Streaming
+      11: {
+      title: "佛度有元人",
+      description: "金币加成功德获取捏",
+      cost: n(1),
+      effect(){
+        eff=n(1)
+        if(hasUpgrade("money",11))
+        eff=eff.add(player.money.gold.pow(0.5))
+        else return eff
+      },
+      effectDisplay(){return `x${format(this.effect())}`}
+                },
 })
