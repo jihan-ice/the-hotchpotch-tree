@@ -288,7 +288,7 @@ addLayer("money", { //这是代码中的节点代码 例如player.p可以调用�
       effect(){
         eff=n(1)
         if(hasUpgrade("money",11))
-        eff=eff.add(player.money.gold.pow(0.5))
+        eff=eff.add(player.money.gold.add(1).pow(0.5))
         else return eff
       },
       effectDisplay(){return `x${format(this.effect())}`}
