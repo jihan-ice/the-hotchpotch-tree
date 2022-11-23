@@ -290,7 +290,6 @@ addLayer("money", { //这是代码中的节点代码 例如player.p可以调用�
         if(hasUpgrade("money",11)){eff = eff.add(player.money.points.add(1).pow(0.5))}
         return eff
       },
-      },
       effectDisplay(){return `x${format(this.effect())}`}
                 },
     },
