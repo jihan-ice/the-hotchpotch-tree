@@ -281,13 +281,13 @@ addLayer("money", { //这是代码中的节点代码 例如player.p可以调用�
     row: 2, // Row the layer is in on the tree (0 is the first row)  QwQ:1也可以当第一排
     layerShown(){return true},
     upgrades: {
-      11： {
+      11: {
       title: "佛度有元人",
       description: "金币加成功德获取捏",
       cost: n(1),
       effect(){
         var eff=n(1)
-        if(hasUpgrade("money",11)){eff = eff.add(player.money.points.add(1).pow(0.5))}
+        if(hasUpgrade("money",11))eff = eff.add(player.money.points.add(1).pow(0.5))
         return eff
       },
       effectDisplay(){return `x${format(this.effect())}`}
